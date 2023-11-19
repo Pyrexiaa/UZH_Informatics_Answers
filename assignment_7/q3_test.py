@@ -45,6 +45,17 @@ class MoveTestSuite(TestCase):
 
         self.assertEqual(expected, actual)
 
+    # Test move out of boundaries
+    def test_move_out_of_boundaries(self):
+        state = (
+            "#####   ",
+            "###    o",
+            "#     ##",
+            "   #####"
+        )
+        with self.assertRaises(Warning):
+            move(state, "right")
+
     # Test only player
     def test_only_player(self):
 

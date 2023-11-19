@@ -15,7 +15,7 @@ class MagicDrawingBoard:
     def rect(self, top_left, bottom_right):
         x1, y1 = top_left
         x2, y2 = bottom_right
-        if x2 < x1 or y2 < y1 or not (0 < x2 <= self.width) or not (0 < y2 <= self.height) or not (0 <= x1 < self.width) or not (0 <= y1 < self.height):
+        if x2 <= x1 or y2 <= y1 or not (0 < x2 <= self.width) or not (0 < y2 <= self.height) or not (0 <= x1 < self.width) or not (0 <= y1 < self.height):
             raise Warning("Invalid rectangle coordinates")
 
         for y in range(y1, y2):
