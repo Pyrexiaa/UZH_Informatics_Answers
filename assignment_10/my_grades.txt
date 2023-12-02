@@ -1,0 +1,5 @@
+info1:0
+
+# comment
+
+info2: 0
