@@ -23,8 +23,11 @@ def process_data(path_reading, path_writing):
             found_name = False
             for index, line in enumerate(lines):
                 line = line.strip() 
-                if line == "Name":
+                if line == "Name" and total_lines > 1:
                     processed_file.write('Firstname,Lastname\n')
+                    found_name = True
+                elif line == "Name" and total_lines == 1:
+                    processed_file.write('Firstname,Lastname')
                     found_name = True
                 elif found_name == False and not line:
                     continue
