@@ -1,5 +1,7 @@
 # UZH_Informatics_Answers
+
 Answers for Informatics I
+
 1. Python Basics
 2. Function Basics
 3. Conditions, Dictionaries & Comprehensions
@@ -11,3 +13,4 @@ Answers for Informatics I
 9. Special Methods
 10. Files & More
 11. Git
+12. Final Practice
