@@ -12,5 +12,5 @@ Answers for Informatics I
 8. Recursion
 9. Special Methods
 10. Files & More
-11. Git
+11. Git & Shell Script
 12. Final Practice
