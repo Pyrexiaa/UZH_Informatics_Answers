@@ -3,7 +3,7 @@
 # Do not rename the function or change its list of parameters!
 
 def hamming_dist(signal_1, signal_2):
-    if len(signal_1) == 0 or len(signal_2) == 0:
+    if not signal_1["data"] or not signal_2:
         return "Empty signal on at least one of the sensors"
     
     if isinstance(signal_1, dict):
@@ -22,7 +22,7 @@ def hamming_dist(signal_1, signal_2):
         return "Sensor defect detected"
     
     if len(data1) != len(data2):
-        return "Sensor defect detected"
+        return "Empty signal on at least one of the sensors"
     
     output = []
     for i in range(len(data1)):
@@ -44,6 +44,6 @@ def hamming_dist(signal_1, signal_2):
 # Try to write your own tests for this.
 
 signal_sensor_1 = {"times": [0, 1, 2, 3, 4, 5],
-                   "data": ["00101110", "11001011", "11110000", "01000011", "11001101", "00011011"]}
-signal_sensor_2 = ("", "11001001", "11110011", "01111011", "11001101", "00011011")
+                   "data": ['22', '']}
+signal_sensor_2 = ("2", "", "")
 print(hamming_dist(signal_sensor_1, signal_sensor_2))

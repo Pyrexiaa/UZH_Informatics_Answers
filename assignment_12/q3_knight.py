@@ -2,15 +2,15 @@ from q3_character import Character
 
 class Knight(Character):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, name, lvl):
+        super().__init__(name, lvl)
 
     # Knights also deal physical damage. They have strong armor and can wear a shield that reduces any physical damage by 25%
     def _take_physical_damage(self, amount):
         assert isinstance(amount, int)
         assert amount >= 0
-        amount = int(amount * 0.75)
-        self._health_cur = max(0, self._health_cur - amount)
+        amount = amount * 0.75
+        self._health_cur = int(max(0, self._health_cur - amount))
 
     # # Unfortunately, this comes at a price, their attacks deal 20% less damage than usual. 
     def _get_caused_dmg(self, other):

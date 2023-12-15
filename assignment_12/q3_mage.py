@@ -2,8 +2,8 @@ from q3_character import Character
 
 class Mage(Character):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, name, lvl):
+        super().__init__(name, lvl)
 
     # A Mage has weak armor, so the damage they take from all kinds of sources is increased by 50%
     def _take_magical_damage(self, amount):

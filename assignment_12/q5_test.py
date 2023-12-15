@@ -58,6 +58,7 @@ class MyTests(TestCase):
         expected = None
         actual = calculate_factorial(inp)
         self.assertEqual(actual, expected)
+        
 
 if __name__== "__main__":
     test_suite = unittest.TestLoader().loadTestsFromTestCase(MyTests)

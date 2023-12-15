@@ -2,8 +2,8 @@ from q3_character import Character
 
 class Rogue(Character):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, name, lvl):
+        super().__init__(name, lvl)
 
     def attack(self, other):
         assert isinstance(other, Character)
